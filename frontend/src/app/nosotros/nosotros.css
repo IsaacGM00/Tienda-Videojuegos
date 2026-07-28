@@ -1,0 +1,44 @@
+.img-nostros {
+  position: absolute;   /* igual que antes */
+  top: 185px;           /* debajo del encabezado y barra */
+  left: 0;
+  right: 0;
+  height: 450px;
+  overflow: hidden;
+}
+
+.contenedor {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 30px; /* ya no necesitas 620px */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #3C27F5;
+}
+
+p {
+  text-align: justify;
+  margin: 10px auto;
+  max-width: 800px;
+  line-height: 1.6;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+               'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background-color: #20A863;
+  margin: 30px auto;
+  width: 80%; /* opcional: que no ocupe todo el ancho */
+}
+
+.contenido-nosotros {
+  margin-top: 660px; /* baja todo el bloque de texto */
+}
