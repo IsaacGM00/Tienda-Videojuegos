@@ -1,0 +1,31 @@
+.menu-cuadritos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+    background-color: #fff;
+    margin-top: 660px;
+}
+
+.cuadrito {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cuadrito img {
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+.cuadrito h3 {
+    font-size: 16px;
+    color: #333;
+}
+
+.cuadrito:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

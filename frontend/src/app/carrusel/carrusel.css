@@ -1,0 +1,81 @@
+.carrusel {
+    position: absolute;
+    top: 180px;
+    left: 0;
+    right: 0;
+    height: 500px;
+    overflow: hidden;
+}
+
+.imagenes {
+    display: flex;
+    height: 100%;
+    transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    height: 100%;
+    background-size: cover;
+    /* muestra completa */
+    background-position: center;
+    /* centrada */
+    background-repeat: no-repeat;
+}
+
+.slide img {
+    max-width: 100%;
+    /* que no se desborde en ancho */
+    max-height: 100%;
+    /* que no se desborde en alto */
+    object-fit: contain;
+    /* mantiene proporción y muestra completa */
+    background-color: #000;
+    /* opcional: relleno detrás */
+}
+
+/* Ocultar radios */
+input[name="slider"] {
+    display: none;
+}
+
+/* Movimiento */
+#radio1:checked~.imagenes {
+    transform: translateX(0%);
+}
+
+#radio2:checked~.imagenes {
+    transform: translateX(-100%);
+}
+
+#radio3:checked~.imagenes {
+    transform: translateX(-200%);
+}
+
+/* Navegación */
+.navegacion-manual {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.manual-btn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.manual-btn:hover {
+    background-color: white;
+}
+
+#radio1:checked~.navegacion-manual .manual-btn:nth-child(1),
+#radio2:checked~.navegacion-manual .manual-btn:nth-child(2),
+#radio3:checked~.navegacion-manual .manual-btn:nth-child(3) {
+    background-color: white;
+}

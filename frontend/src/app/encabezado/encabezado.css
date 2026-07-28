@@ -1,0 +1,73 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #808080;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.navbar img {
+    display: block;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+    position: relative; /* permite colocar el botón dentro */
+    display: flex;
+    align-items: center;
+    flex: 1; /* hace que ocupe más espacio dentro del navbar */
+    max-width: 700px; /* límite máximo opcional */
+}
+
+.search-bar input {
+    padding: 0.5rem 2.5rem 0.5rem 0.5rem; /* espacio a la derecha para el botón */
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+    width: 100%; /* ocupa todo el ancho disponible */
+}
+
+.search-bar button {
+    position: absolute;
+    right: 5px; /* coloca el botón dentro del input */
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #808080;
+    font-size: 1rem;
+}
+
+.search-bar button:hover {
+    color: #0A8F25;
+}
+
+.header-links {
+    display: flex;
+    color: white;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header-links li:hover {
+    color: #0A8F25;
+}
+
+/* Label oculto pero accesible */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
