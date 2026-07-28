@@ -64,14 +64,25 @@
 .product-img {
   width: 150px;
   height: 150px;
-  object-fit: cover; /* recorta y ajusta la imagen */
   border-radius: 6px;
   margin-bottom: 10px;
 }
 
 h2 {
   text-align: center;
-  margin-top: 200px; /* ya no necesitas 620px */
+  margin-top: 30px; /* ya no necesitas 620px */
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #3C27F5;
+}
+
+.titulo-xbox {
+  color: #168A0C; /* verde */
+}
+
+.titulo-play {
+  color: #3C27F5; /* azul PlayStation */
+}
+
+.contenido-juegos {
+  margin-top: 200px; /* baja todo el bloque de texto */
 }

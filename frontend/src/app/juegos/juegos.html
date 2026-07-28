@@ -1,19 +1,36 @@
 <app-encabezado></app-encabezado>
 <app-barra></app-barra>
 
-<h2>Lo mejor de Play Station</h2>
+<div class="contenido-juegos">
+  <h2 class="titulo-play">Lo mejor de Play Station</h2>
 
-<div class="store">
-  @for (juego of juegos; track juego.id) {
-    <div class="card">
-       <img [src]="'assets/images/juegos/playstation/' + juego.imagen" [alt]="juego.nombreJuego" class="product-img">
-      <h3>{{ juego.nombreJuego }}</h3>
-      <p class="console">{{ juego.consola }}</p>
-      <p class="price">${{ juego.precio }}</p>
-      <span class="warranty">24 MESES DE GARANTÍA</span>
-      <button class="cart">🛒</button>
-    </div>
-  }
+  <div class="store">
+    @for (juego of juegosPlay; track juego.id) {
+        <div class="card">
+          <img [src]="'assets/images/juegos/playstation/' + juego.imagen" [alt]="juego.nombreJuego" class="product-img">
+          <h3>{{ juego.nombreJuego }}</h3>
+          <p class="console">{{ juego.consola }}</p>
+          <p class="price">${{ juego.precio }}</p>
+          <span class="warranty">24 MESES DE GARANTÍA</span>
+          <button class="cart">🛒</button>
+        </div>
+    }
+  </div>
+
+  <h2 class="titulo-xbox">Lo mejor de Xbox</h2>
+
+  <div class="store">
+    @for (juego of juegosXbox; track juego.id) {
+      <div class="card">
+        <img [src]="'assets/images/juegos/xbox/' + juego.imagen" [alt]="juego.nombreJuego" class="product-img">
+        <h3>{{ juego.nombreJuego }}</h3>
+        <p class="console">{{ juego.consola }}</p>
+        <p class="price">${{ juego.precio }}</p>
+        <span class="warranty">24 MESES DE GARANTÍA</span>
+        <button class="cart">🛒</button>
+      </div>
+    }
+  </div>
 </div>
 
 <app-pie></app-pie>
