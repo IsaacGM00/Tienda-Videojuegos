@@ -1,27 +1,19 @@
 <app-encabezado></app-encabezado>
 <app-barra></app-barra>
 
- <h2>Lo mejor de Play Station</h2>
-<!-- Contenedor general -->
+<h2>Lo mejor de Play Station</h2>
+
 <div class="store">
-  <div class="card">
-    <img src="fuzion.jpg" alt="Fuzion Frenzy 2" class="product-img">
-    <h3>Fuzion Frenzy 2</h3>
-    <p class="console">Xbox 360 Juegos</p>
-    <p class="price">$180.00</p>
-    <span class="warranty">24 MESES DE GARANTÍA</span>
-    <button class="cart">🛒</button>
-  </div>
-
-  <div class="card">
-    <img src="batman.jpg" alt="Batman Arkham Origins" class="product-img">
-    <h3>Batman Arkham Origins (2 Disc)</h3>
-    <p class="console">Xbox 360 Juegos</p>
-    <p class="price">$450.00</p>
-    <span class="warranty">24 MESES DE GARANTÍA</span>
-    <button class="cart">🛒</button>
-  </div>
+  @for (juego of juegos; track juego.id) {
+    <div class="card">
+       <img [src]="'assets/images/juegos/playstation/' + juego.imagen" [alt]="juego.nombreJuego" class="product-img">
+      <h3>{{ juego.nombreJuego }}</h3>
+      <p class="console">{{ juego.consola }}</p>
+      <p class="price">${{ juego.precio }}</p>
+      <span class="warranty">24 MESES DE GARANTÍA</span>
+      <button class="cart">🛒</button>
+    </div>
+  }
 </div>
-
 
 <app-pie></app-pie>

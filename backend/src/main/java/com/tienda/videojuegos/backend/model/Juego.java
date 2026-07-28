@@ -19,4 +19,5 @@ public class Juego {
     private String consola;
     private String nombreJuego;
     private Double precio;
+    private String imagen;
 }

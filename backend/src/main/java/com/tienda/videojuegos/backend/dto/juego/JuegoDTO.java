@@ -10,4 +10,5 @@ public class JuegoDTO {
     private String consola;
     private String nombreJuego;
     private Double precio;
+    private String imagen;
 }

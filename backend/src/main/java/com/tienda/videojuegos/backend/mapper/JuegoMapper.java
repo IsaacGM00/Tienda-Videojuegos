@@ -18,6 +18,7 @@ public class JuegoMapper {
         juegoDTO.setConsola(juego.getConsola());
         juegoDTO.setNombreJuego(juego.getNombreJuego());
         juegoDTO.setPrecio(juego.getPrecio());
+        juegoDTO.setImagen(juego.getImagen());
         return juegoDTO;
     }
 
@@ -27,6 +28,7 @@ public class JuegoMapper {
         juego.setConsola(juegoCreateDTO.getConsola());
         juego.setNombreJuego(juegoCreateDTO.getNombreJuego());
         juego.setPrecio(juegoCreateDTO.getPrecio());
+        juego.setImagen(juegoCreateDTO.getImagen());
         return juego;
     }
 
@@ -34,5 +36,6 @@ public class JuegoMapper {
         juego.setConsola(juegoCreateDTO.getConsola());
         juego.setNombreJuego(juegoCreateDTO.getNombreJuego());
         juego.setPrecio(juegoCreateDTO.getPrecio());
+        juego.setImagen(juegoCreateDTO.getImagen());
     }
 }
