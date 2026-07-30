@@ -83,6 +83,17 @@ h2 {
   color: #3C27F5; /* azul PlayStation */
 }
 
+.titulo-nintendo {
+  color: #E60909;
+}
+
 .contenido-juegos {
   margin-top: 200px; /* baja todo el bloque de texto */
+}
+
+app-pie {
+    position: absolute;
+    top: 330px;
+    left: 0;
+    right: 0;
 }

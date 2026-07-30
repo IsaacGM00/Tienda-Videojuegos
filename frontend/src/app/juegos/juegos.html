@@ -31,6 +31,21 @@
       </div>
     }
   </div>
+
+  <h2 class="titulo-nintendo">Lo mejor de Nintendo</h2>
+
+  <div class="store">
+    @for (juego of juegosNintendo; track juego.id) {
+      <div class="card">
+        <img [src]="'assets/images/juegos/nintendo/' + juego.imagen" [alt]="juego.nombreJuego" class="product-img">
+        <h3>{{ juego.nombreJuego }}</h3>
+        <p class="console">{{ juego.consola }}</p>
+        <p class="price">${{ juego.precio }}</p>
+        <span class="warranty">24 MESES DE GARANTÍA</span>
+        <button class="cart">🛒</button>
+      </div>
+    }
+  </div>
 </div>
 
 <app-pie></app-pie>

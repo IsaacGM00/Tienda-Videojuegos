@@ -14,6 +14,7 @@ export class Juegos implements OnInit {
   juegos: Juego[] = [];
   juegosPlay: Juego[] = [];
   juegosXbox: Juego[] = [];
+  juegosNintendo: Juego[] = [];
 
   constructor(private readonly juegoService: JuegosService) {}
 
@@ -34,6 +35,14 @@ export class Juegos implements OnInit {
         j.consola === 'Xbox' ||
         j.consola === 'Xbox 360' ||
         j.consola === 'Xbox One'
+      );
+
+      // Filtrar Nintendo (incluye Wii, Nintendo Switch)
+      this.juegosNintendo = data.filter(j =>
+        j.consola === 'Wii' ||
+        j.consola === 'Nintendo Switch' ||
+        j.consola === 'Game Boy' ||
+        j.consola === 'Nintendo DS'
       );
     });
   }
