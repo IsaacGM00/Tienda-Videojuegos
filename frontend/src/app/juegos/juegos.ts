@@ -27,13 +27,15 @@ export class Juegos implements OnInit {
         j.consola === 'PlayStation' ||
         j.consola === 'PS2' ||
         j.consola === 'PS3' ||
-        j.consola === 'PS4'
+        j.consola === 'PS4' ||
+        j.consola === 'PS5'
       );
 
       // Filtrar Xbox (incluye Xbox 360, Xbox One)
       this.juegosXbox = data.filter(j =>
         j.consola === 'Xbox' ||
         j.consola === 'Xbox 360' ||
+        j.consola === 'Xbox Series X' ||
         j.consola === 'Xbox One'
       );
 
@@ -41,6 +43,7 @@ export class Juegos implements OnInit {
       this.juegosNintendo = data.filter(j =>
         j.consola === 'Wii' ||
         j.consola === 'Nintendo Switch' ||
+        j.consola === 'Nintendo Switch 2' ||
         j.consola === 'Game Boy' ||
         j.consola === 'Nintendo DS'
       );
