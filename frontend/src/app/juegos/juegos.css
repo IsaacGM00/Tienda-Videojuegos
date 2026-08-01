@@ -1,12 +1,15 @@
 .store {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
+  display: flex;              /* coloca las tarjetas en fila */
+  gap: 20px;                  /* espacio entre tarjetas */
   padding: 20px;
   margin-top: 20px;
+  overflow-x: auto;           /* activa scroll horizontal */
+  scroll-snap-type: x mandatory; /* opcional: efecto de "snap" */
 }
 
 .card {
+  flex: 0 0 auto;             /* evita que se encojan */
+  width: 220px;               /* tamaño fijo */
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -14,12 +17,13 @@
   text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  scroll-snap-align: start;   /* opcional: alinea cada tarjeta */
 }
 
 /* Efecto al pasar el mouse */
 .card:hover {
-  transform: translateY(-8px); /* se eleva */
-  box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* sombra más fuerte */
+  transform: translateY(-8px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
 .card h3 {
@@ -70,17 +74,17 @@
 
 h2 {
   text-align: center;
-  margin-top: 30px; /* ya no necesitas 620px */
+  margin-top: 30px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #3C27F5;
 }
 
 .titulo-xbox {
-  color: #168A0C; /* verde */
+  color: #168A0C;
 }
 
 .titulo-play {
-  color: #3C27F5; /* azul PlayStation */
+  color: #3C27F5;
 }
 
 .titulo-nintendo {
@@ -88,12 +92,12 @@ h2 {
 }
 
 .contenido-juegos {
-  margin-top: 200px; /* baja todo el bloque de texto */
+  margin-top: 200px;
 }
 
 app-pie {
-    position: absolute;
-    top: 380px;
-    left: 0;
-    right: 0;
+  position: absolute;
+  top: 450px;
+  left: 0;
+  right: 0;
 }
