@@ -10,4 +10,5 @@ public class MandoDTO {
     private String consola;
     private String nombreMando;
     private Double precio;
+    private String imagen;
 }

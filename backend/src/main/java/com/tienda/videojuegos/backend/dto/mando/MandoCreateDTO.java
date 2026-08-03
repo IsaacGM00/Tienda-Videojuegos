@@ -9,4 +9,5 @@ public class MandoCreateDTO {
     private String consola;
     private String nombreMando;
     private Double precio;
+    private String imagen;
 }

@@ -6,7 +6,7 @@ import com.tienda.videojuegos.backend.model.Mando;
 
 public class MandoMapper {
     
-        private MandoMapper(){
+    private MandoMapper(){
         throw new UnsupportedOperationException("Instaciación NO permitida");
     }
 
@@ -16,6 +16,7 @@ public class MandoMapper {
         mandoDTO.setConsola(mando.getConsola());
         mandoDTO.setNombreMando(mando.getNombreMando());
         mandoDTO.setPrecio(mando.getPrecio());
+        mandoDTO.setImagen(mando.getImagen());
         return mandoDTO;
     }
 
@@ -24,6 +25,7 @@ public class MandoMapper {
         mando.setConsola(mandoCreateDTO.getConsola());
         mando.setNombreMando(mandoCreateDTO.getNombreMando());
         mando.setPrecio(mandoCreateDTO.getPrecio());
+        mando.setImagen(mandoCreateDTO.getImagen());
         return mando;
     }
 
@@ -31,6 +33,7 @@ public class MandoMapper {
         mando.setConsola(mandoCreateDTO.getConsola());
         mando.setNombreMando(mandoCreateDTO.getNombreMando());
         mando.setPrecio(mandoCreateDTO.getPrecio());
+        mando.setImagen(mandoCreateDTO.getImagen());
     }
     
 }

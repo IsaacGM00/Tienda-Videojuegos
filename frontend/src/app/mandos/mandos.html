@@ -1,0 +1,51 @@
+<app-encabezado></app-encabezado>
+<app-barra></app-barra>
+
+<div class="contenido-mandos">
+  <h2 class="titulo-play">Play Station</h2>
+
+  <div class="store">
+    @for (mando of mandosPlay; track mando.id) {
+        <div class="card">
+          <img [src]="'assets/images/mandos/playstation/' + mando.imagen" [alt]="mando.nombreMando" class="product-img">
+          <h3>{{ mando.nombreMando }}</h3>
+          <p class="console">{{ mando.consola }}</p>
+          <p class="price">${{ mando.precio }}</p>
+          <span class="warranty">24 MESES DE GARANTÍA</span>
+          <button class="cart">🛒</button>
+        </div>
+    }
+  </div>
+
+  <h2 class="titulo-xbox">Xbox</h2>
+
+  <div class="store">
+    @for (mando of mandosXbox; track mando.id) {
+      <div class="card">
+        <img [src]="'assets/images/mandos/xbox/' + mando.imagen" [alt]="mando.nombreMando" class="product-img">
+        <h3>{{ mando.nombreMando }}</h3>
+        <p class="console">{{ mando.consola }}</p>
+        <p class="price">${{ mando.precio }}</p>
+        <span class="warranty">24 MESES DE GARANTÍA</span>
+        <button class="cart">🛒</button>
+      </div>
+    }
+  </div>
+
+  <h2 class="titulo-nintendo">Nintendo</h2>
+
+  <div class="store">
+    @for (mando of mandosNintendo; track mando.id) {
+      <div class="card">
+        <img [src]="'assets/images/mandos/nintendo/' + mando.imagen" [alt]="mando.nombreMando" class="product-img">
+        <h3>{{ mando.nombreMando }}</h3>
+        <p class="console">{{ mando.consola }}</p>
+        <p class="price">${{ mando.precio }}</p>
+        <span class="warranty">24 MESES DE GARANTÍA</span>
+        <button class="cart">🛒</button>
+      </div>
+    }
+  </div>
+</div>
+
+<app-pie></app-pie>
