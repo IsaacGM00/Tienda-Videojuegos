@@ -36,6 +36,17 @@ public class JuegoController {
         return JuegoMapper.toDTO(juegoGuardado);
     }
 
+    @PostMapping("/varios")
+    public List<JuegoDTO> createJuegos(@RequestBody List<JuegoCreateDTO> juegosCreateDTO) {
+        List<Juego> juegos = juegosCreateDTO.stream()
+                                  .map(JuegoMapper::toEntity)
+                                  .toList();
+        List<Juego> juegosGuardados = juegoService.createJuegos(juegos);
+        return juegosGuardados.stream()
+                          .map(JuegoMapper::toDTO)
+                          .toList();
+    }
+
     @GetMapping
     public List<Juego> getAllJuegos() {
         return juegoService.getAllJuegos();

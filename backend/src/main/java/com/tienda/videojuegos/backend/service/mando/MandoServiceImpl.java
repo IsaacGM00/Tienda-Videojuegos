@@ -23,6 +23,11 @@ public class MandoServiceImpl implements MandoService{
     }
 
     @Override
+    public List<Mando> createMandos(List<Mando> mandos) {
+        return mandoRepository.saveAll(mandos);
+    }
+
+    @Override
     public Mando getMandoById(Long id) {
         return mandoRepository.findById(id).orElseThrow();
     }

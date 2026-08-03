@@ -23,6 +23,11 @@ public class ConsolaServiceImpl implements ConsolaService{
     }
 
     @Override
+    public List<Consola> createConsolas(List<Consola> consolas) {
+        return consolaRepository.saveAll(consolas);
+    }
+
+    @Override
     public Consola getConsolaById(Long id) {
         return consolaRepository.findById(id).orElseThrow();
     }
@@ -46,5 +51,5 @@ public class ConsolaServiceImpl implements ConsolaService{
     public void deleteConsola(Long id) {
         consolaRepository.deleteById(id);
     }
-    
+
 }

@@ -23,6 +23,11 @@ public class JuegoServiceImpl implements JuegoService{
     }
 
     @Override
+    public List<Juego> createJuegos(List<Juego> juegos) {
+        return juegoRepository.saveAll(juegos);
+    }
+
+    @Override
     public Juego getJuegoById(Long id) {
         return juegoRepository.findById(id).orElseThrow();
     }
@@ -46,5 +51,5 @@ public class JuegoServiceImpl implements JuegoService{
     public void deleteJuego(Long id) {
         juegoRepository.deleteById(id);
     }
-    
+
 }

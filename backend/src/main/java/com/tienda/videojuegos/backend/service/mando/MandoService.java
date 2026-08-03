@@ -7,6 +7,7 @@ import com.tienda.videojuegos.backend.model.Mando;
 
 public interface MandoService {
     Mando createMando(Mando mando);
+    List<Mando> createMandos(List<Mando> mandos);
     Mando getMandoById(Long id);
     List<Mando> getAllMandos();
     Mando updateMando(Long id, MandoCreateDTO mandoCreateDTO);

@@ -33,6 +33,17 @@ public class MandoController {
         return MandoMapper.toDTO(mandoGuardado);
     }
 
+    @PostMapping("/varios")
+    public List<MandoDTO> createMandos(@RequestBody List<MandoCreateDTO> mandosCreateDTO) {
+        List<Mando> mandos = mandosCreateDTO.stream()
+                                  .map(MandoMapper::toEntity)
+                                  .toList();
+        List<Mando> mandosGuardados = mandoService.createMandos(mandos);
+        return mandosGuardados.stream()
+                          .map(MandoMapper::toDTO)
+                          .toList();
+    }
+
     @GetMapping
     public List<Mando> getAllMandos() {
         return mandoService.getAllMandos();

@@ -34,6 +34,17 @@ public class ConsolaController {
         return ConsolaMapper.toDTO(consolaGuardada);
     }
 
+    @PostMapping("/varias")
+    public List<ConsolaDTO> createConsolas(@RequestBody List<ConsolaCreateDTO> consolasCreateDTO) {
+        List<Consola> consolas = consolasCreateDTO.stream()
+                                  .map(ConsolaMapper::toEntity)
+                                  .toList();
+        List<Consola> consolasGuardadas = consolaService.createConsolas(consolas);
+        return consolasGuardadas.stream()
+                          .map(ConsolaMapper::toDTO)
+                          .toList();
+    }
+
     @GetMapping
     public List<Consola> getAllConsolas() {
         return consolaService.getAllConsolas();
