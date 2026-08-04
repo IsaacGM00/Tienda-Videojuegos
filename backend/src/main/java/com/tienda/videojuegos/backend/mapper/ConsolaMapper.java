@@ -16,6 +16,7 @@ public class ConsolaMapper {
         consolaDTO.setSerieConsola(consola.getSerieConsola());
         consolaDTO.setNombreConsola(consola.getNombreConsola());
         consolaDTO.setPrecio(consola.getPrecio());
+        consolaDTO.setImagen(consola.getImagen());
         return consolaDTO;
     }
 
@@ -24,6 +25,7 @@ public class ConsolaMapper {
         consola.setSerieConsola(consolaCreateDTO.getSerieConsola());
         consola.setNombreConsola(consolaCreateDTO.getNombreConsola());
         consola.setPrecio(consolaCreateDTO.getPrecio());
+        consola.setImagen(consolaCreateDTO.getImagen());
         return consola;
     }
 
@@ -31,6 +33,7 @@ public class ConsolaMapper {
         consola.setSerieConsola(consolaCreateDTO.getSerieConsola());
         consola.setNombreConsola(consolaCreateDTO.getNombreConsola());
         consola.setPrecio(consolaCreateDTO.getPrecio());
+        consola.setImagen(consolaCreateDTO.getImagen());
     }
     
 }

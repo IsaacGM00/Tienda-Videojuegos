@@ -1,0 +1,51 @@
+<app-encabezado></app-encabezado>
+<app-barra></app-barra>
+
+<div class="contenido-consolas">
+  <h2 class="titulo-play">Play Station</h2>
+
+  <div class="store">
+    @for (consola of consolasPlay; track consola.id) {
+        <div class="card">
+          <img [src]="'assets/images/consolas/playstation/' + consola.imagen" [alt]="consola.nombreConsola" class="product-img">
+          <h3>{{ consola.nombreConsola }}</h3>
+          <p class="console">{{ consola.serieConsola }}</p>
+          <p class="price">${{ consola.precio }}</p>
+          <span class="warranty">24 MESES DE GARANTÍA</span>
+          <button class="cart">🛒</button>
+        </div>
+    }
+  </div>
+
+  <h2 class="titulo-xbox">Xbox</h2>
+
+  <div class="store">
+    @for (consola of consolasXbox; track consola.id) {
+      <div class="card">
+        <img [src]="'assets/images/consolas/xbox/' + consola.imagen" [alt]="consola.nombreConsola" class="product-img">
+        <h3>{{ consola.nombreConsola }}</h3>
+        <p class="console">{{ consola.serieConsola }}</p>
+        <p class="price">${{ consola.precio }}</p>
+        <span class="warranty">24 MESES DE GARANTÍA</span>
+        <button class="cart">🛒</button>
+      </div>
+    }
+  </div>
+
+  <h2 class="titulo-nintendo">Nintendo</h2>
+
+  <div class="store">
+    @for (consola of consolasNintendo; track consola.id) {
+      <div class="card">
+        <img [src]="'assets/images/consolas/nintendo/' + consola.imagen" [alt]="consola.nombreConsola" class="product-img">
+        <h3>{{ consola.nombreConsola }}</h3>
+        <p class="console">{{ consola.serieConsola }}</p>
+        <p class="price">${{ consola.precio }}</p>
+        <span class="warranty">24 MESES DE GARANTÍA</span>
+        <button class="cart">🛒</button>
+      </div>
+    }
+  </div>
+</div>
+
+<app-pie></app-pie>

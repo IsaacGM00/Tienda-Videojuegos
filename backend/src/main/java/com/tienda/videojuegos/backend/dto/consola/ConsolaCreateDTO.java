@@ -9,4 +9,5 @@ public class ConsolaCreateDTO {
     private String serieConsola;
     private String nombreConsola;
     private Double precio;
+    private String imagen;
 }
