@@ -13,7 +13,7 @@ import com.tienda.videojuegos.backend.repository.JuegoRepository;
 public class JuegoServiceImpl implements JuegoService{
     private final JuegoRepository juegoRepository;
 
-    JuegoServiceImpl(JuegoRepository juegoRepository){
+    public JuegoServiceImpl(JuegoRepository juegoRepository){
         this.juegoRepository = juegoRepository;
     }
 

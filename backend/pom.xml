@@ -127,6 +127,25 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+      			<groupId>org.sonarsource.scanner.maven</groupId>
+      			<artifactId>sonar-maven-plugin</artifactId>
+      			<version>3.9.1.2184</version>
+    		</plugin>
+			<!-- Plugin de JaCoCo -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.10</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 		</plugins>
 	</build>
 

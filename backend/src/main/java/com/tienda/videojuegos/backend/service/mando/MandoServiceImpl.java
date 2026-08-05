@@ -13,7 +13,7 @@ import com.tienda.videojuegos.backend.repository.MandoRepository;
 public class MandoServiceImpl implements MandoService{
     private final MandoRepository mandoRepository;
 
-    MandoServiceImpl(MandoRepository mandoRepository){
+    public MandoServiceImpl(MandoRepository mandoRepository){
         this.mandoRepository = mandoRepository;
     }
 

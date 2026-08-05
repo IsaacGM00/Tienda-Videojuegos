@@ -11,9 +11,9 @@ import com.tienda.videojuegos.backend.repository.ConsolaRepository;
 
 @Service
 public class ConsolaServiceImpl implements ConsolaService{
-        private final ConsolaRepository consolaRepository;
+    private final ConsolaRepository consolaRepository;
 
-    ConsolaServiceImpl(ConsolaRepository consolaRepository){
+    public ConsolaServiceImpl(ConsolaRepository consolaRepository){
         this.consolaRepository = consolaRepository;
     }
 
