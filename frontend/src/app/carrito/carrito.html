@@ -1,0 +1,25 @@
+<div class="carrito">
+  <h2>Tu carrito</h2>
+
+  @for (item of items; track item.id) {
+    <div class="carrito-item">
+      <img [src]="'assets/images/' + item.tipo + '/' + item.imagen" [alt]="item.nombre">
+
+      <div class="carrito-info">
+        <span><strong>{{ item.nombre }}</strong></span>
+        <span>${{ item.precio }}</span>
+        <span>Cantidad: {{ item.cantidad }}</span>
+      </div>
+
+      <div class="carrito-actions">
+        <button (click)="incrementar(item)">+</button>
+        <button (click)="decrementar(item)">-</button>
+        <button (click)="eliminar(item)">🗑️</button>
+      </div>
+    </div>
+  }
+
+  <div class="carrito-total">
+    Total: ${{ total }}
+  </div>
+</div>

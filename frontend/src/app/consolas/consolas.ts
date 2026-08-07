@@ -3,6 +3,7 @@ import { ConsolasService, Consola } from './consolas.service';
 import { Encabezado } from '../encabezado/encabezado';
 import { Barra } from '../barra/barra';
 import { Pie } from '../pie/pie';
+import { CarritoService } from '../carrito/carrito.service';
 
 @Component({
   selector: 'app-consolas',
@@ -16,7 +17,10 @@ export class Consolas implements OnInit{
       consolasXbox: Consola[] = [];
       consolasNintendo: Consola[] = [];
 
-      constructor(private readonly consolaService: ConsolasService) {}
+      constructor(
+        private readonly consolaService: ConsolasService,
+        private readonly carritoService: CarritoService
+      ) {}
 
       ngOnInit(): void {
         this.consolaService.getAll().subscribe(data => {
@@ -38,4 +42,15 @@ export class Consolas implements OnInit{
           );
         });
       }
+
+      agregarAlCarrito(consola: any) {
+        this.carritoService.addItem({
+          id: consola.id,
+          nombre: consola.nombreConsola,
+          precio: consola.precio,
+          imagen: consola.imagen,
+          cantidad: 1,
+          tipo: 'consolas'
+      });
+    }
 }

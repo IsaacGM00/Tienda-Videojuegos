@@ -60,6 +60,15 @@
     color: #0A8F25;
 }
 
+.header-links a {
+  color: inherit;       /* hereda el color del padre (blanco en tu caso) */
+  text-decoration: none; /* quita el subrayado */
+}
+
+.header-links a:hover {
+  color: #0A8F25; /* el mismo efecto hover que ya tienes */
+}
+
 /* Label oculto pero accesible */
 .visually-hidden {
     position: absolute;

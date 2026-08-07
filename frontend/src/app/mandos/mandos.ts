@@ -3,6 +3,7 @@ import { MandosService, Mando } from './mandos.service';
 import { Encabezado } from '../encabezado/encabezado';
 import { Barra } from '../barra/barra';
 import { Pie } from '../pie/pie';
+import { CarritoService } from '../carrito/carrito.service';
 
 @Component({
   selector: 'app-mandos',
@@ -10,13 +11,17 @@ import { Pie } from '../pie/pie';
   templateUrl: './mandos.html',
   styleUrl: './mandos.css',
 })
+
 export class Mandos implements OnInit{
     mandos: Mando[] = [];
     mandosPlay: Mando[] = [];
     mandosXbox: Mando[] = [];
     mandosNintendo: Mando[] = [];
 
-    constructor(private readonly mandoService: MandosService) {}
+    constructor(
+      private readonly mandoService: MandosService,
+      private readonly carritoService: CarritoService
+    ) {}
 
     ngOnInit(): void {
       this.mandoService.getAll().subscribe(data => {
@@ -47,6 +52,17 @@ export class Mandos implements OnInit{
           m.consola === 'Game Boy' ||
           m.consola === 'Nintendo DS'
         );
+      });
+    }
+
+    agregarAlCarrito(mando: any) {
+      this.carritoService.addItem({
+        id: mando.id,
+        nombre: mando.nombreMando,
+        precio: mando.precio,
+        imagen: mando.imagen,
+        cantidad: 1,
+        tipo: 'mandos'
       });
     }
 }

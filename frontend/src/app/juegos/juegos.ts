@@ -3,6 +3,7 @@ import { JuegosService, Juego } from './juegos.service';
 import { Encabezado } from '../encabezado/encabezado';
 import { Barra } from '../barra/barra';
 import { Pie } from '../pie/pie';
+import { CarritoService } from '../carrito/carrito.service';
 
 @Component({
   selector: 'app-juegos',
@@ -10,13 +11,17 @@ import { Pie } from '../pie/pie';
   imports: [Encabezado, Barra, Pie],
   styleUrls: ['./juegos.css']
 })
+
 export class Juegos implements OnInit {
   juegos: Juego[] = [];
   juegosPlay: Juego[] = [];
   juegosXbox: Juego[] = [];
   juegosNintendo: Juego[] = [];
 
-  constructor(private readonly juegoService: JuegosService) {}
+  constructor(
+    private readonly juegoService: JuegosService,
+    private readonly carritoService: CarritoService
+  ) {}
 
   ngOnInit(): void {
     this.juegoService.getAll().subscribe(data => {
@@ -47,6 +52,19 @@ export class Juegos implements OnInit {
         j.consola === 'Game Boy' ||
         j.consola === 'Nintendo DS'
       );
+
     });
   }
+
+  agregarAlCarrito(juego: any) {
+    this.carritoService.addItem({
+      id: juego.id,
+      nombre: juego.nombreJuego,
+      precio: juego.precio,
+      imagen: juego.imagen,
+      cantidad: 1,
+      tipo: 'juegos'
+    });
+  }
+
 }
