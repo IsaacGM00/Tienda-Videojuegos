@@ -43,12 +43,27 @@ export class Consolas implements OnInit{
         });
       }
 
+      private getMarcaFolder(serieConsola: string): string {
+        serieConsola = serieConsola.toLowerCase();
+        if (serieConsola.includes('playstation')) {
+          return 'playstation';
+        }
+        if (serieConsola.includes('xbox')) {
+          return 'xbox';
+        }
+        if (serieConsola.includes('nintendo')) {
+          return 'nintendo';
+        }
+        return 'otros'; // fallback si no coincide
+      }
+
       agregarAlCarrito(consola: any) {
+        const marcaFolder = this.getMarcaFolder(consola.serieConsola);
         this.carritoService.addItem({
           id: consola.id,
           nombre: consola.nombreConsola,
           precio: consola.precio,
-          imagen: consola.imagen,
+          imagen: `assets/images/consolas/${marcaFolder}/${consola.imagen}`,
           cantidad: 1,
           tipo: 'consolas'
       });

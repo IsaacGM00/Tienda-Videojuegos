@@ -3,7 +3,7 @@
 
   @for (item of items; track item.id) {
     <div class="carrito-item">
-      <img [src]="'assets/images/' + item.tipo + '/' + item.imagen" [alt]="item.nombre">
+      <img [src]="item.imagen" [alt]="item.nombre">
 
       <div class="carrito-info">
         <span><strong>{{ item.nombre }}</strong></span>

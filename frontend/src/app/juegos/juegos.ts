@@ -56,12 +56,27 @@ export class Juegos implements OnInit {
     });
   }
 
+  private getMarcaFolder(consola: string): string {
+    consola = consola.toLowerCase();
+    if (consola.includes('playstation') || consola.startsWith('ps')) {
+      return 'playstation';
+    }
+    if (consola.includes('xbox')) {
+      return 'xbox';
+    }
+    if (consola.includes('nintendo') || consola.includes('wii') || consola.includes('game boy') || consola.includes('ds') || consola.includes('switch')) {
+      return 'nintendo';
+    }
+    return 'otros'; // fallback si no coincide
+  }
+
   agregarAlCarrito(juego: any) {
+    const marcaFolder = this.getMarcaFolder(juego.consola);
     this.carritoService.addItem({
       id: juego.id,
       nombre: juego.nombreJuego,
       precio: juego.precio,
-      imagen: juego.imagen,
+      imagen: `assets/images/juegos/${marcaFolder}/${juego.imagen}`,
       cantidad: 1,
       tipo: 'juegos'
     });
