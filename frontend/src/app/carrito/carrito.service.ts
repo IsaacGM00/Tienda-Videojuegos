@@ -72,6 +72,8 @@ export class CarritoService {
   }
 
   getTotal() {
-    return this.items.reduce((acc, i) => acc + i.precio * i.cantidad, 0);
+    const total = this.items.reduce((acc, i) => acc + i.precio * i.cantidad, 0);
+    return Number.parseFloat(total.toFixed(3)); // redondea a 3 decimales
   }
+
 }
