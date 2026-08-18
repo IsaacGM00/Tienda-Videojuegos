@@ -10,8 +10,14 @@
         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
     </form>
 
-    <ul class="header-links">
-        <li><a routerLink="/carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
-        <li><i class="fa-solid fa-user"></i></li>
-    </ul>
+  <ul class="header-links">
+    <li class="cart-icon">
+      <a routerLink="/carrito">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-badge">{{ getCantidadTotal(items$ | async) }}</span>
+      </a>
+    </li>
+    <li><i class="fa-solid fa-user"></i></li>
+  </ul>
+
 </nav>
