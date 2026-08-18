@@ -1,10 +1,13 @@
 import { Component, OnInit} from '@angular/core';
 import { CarritoService, ItemCarrito } from './carrito.service';
+import { Encabezado } from '../encabezado/encabezado';
+import { Barra } from '../barra/barra';
+import { Pie } from '../pie/pie';
 
 @Component({
   selector: 'app-carrito',
-  standalone: true, // si lo usas como standalone
-  imports: [],
+  standalone: true,
+  imports: [Encabezado, Barra, Pie],
   templateUrl: './carrito.html',
   styleUrls: ['./carrito.css'],
 })
