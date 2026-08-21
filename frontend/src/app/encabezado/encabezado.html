@@ -1,14 +1,14 @@
 <nav class="navbar">
-    <a routerLink="/">
-          <img src="assets/images/logo.png" alt="Logo" width="150" height="75">
-    </a>
+  <a routerLink="/">
+    <img src="assets/images/logo.png" alt="Logo" width="150" height="75" />
+  </a>
 
-    <!-- Barra de búsqueda con label -->
-    <form class="search-bar">
-        <label for="search-input" class="visually-hidden">Buscar</label>
-        <input id="search-input" type="text" placeholder="Buscar..." />
-        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-    </form>
+  <!-- Barra de búsqueda con label -->
+  <form class="search-bar">
+    <label for="search-input" class="visually-hidden">Buscar</label>
+    <input id="search-input" type="text" placeholder="Buscar..." />
+    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+  </form>
 
   <ul class="header-links">
     <li class="cart-icon">
@@ -17,7 +17,8 @@
         <span class="cart-badge">{{ getCantidadTotal(items$ | async) }}</span>
       </a>
     </li>
-    <li><i class="fa-solid fa-user"></i></li>
+    <li>
+      <a routerLink="/usuarios"><i class="fa-solid fa-user"></i></a>
+    </li>
   </ul>
-
 </nav>

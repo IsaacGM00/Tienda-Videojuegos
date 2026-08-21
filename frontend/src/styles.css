@@ -1,1 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
+body.usuarios {
+  background: linear-gradient(to right, #f5330f 50%, #cfcfcf 50%);
+}
