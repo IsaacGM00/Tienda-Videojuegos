@@ -1,7 +1,8 @@
-
 Para levantar la página web, se hace desde dos perspectivas:
-<li><b>Backend</b></li>
-<li><b>Frontend</b></li>
+<ul>
+   <li><b>Backend</b></li>
+   <li><b>Frontend</b></li>
+</ul>
 
 <h2 align="center">------ BACKEND ------</h2>
 
