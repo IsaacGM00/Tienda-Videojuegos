@@ -6,7 +6,6 @@ Para levantar la página web, se hace desde dos perspectivas:
 1. Posicionarse en la carpeta "backend" (puede ser desde cualquier terminal)
    <img width="407" height="32" alt="image" src="https://github.com/user-attachments/assets/d27b2a11-1281-4a31-8fa1-2890bc4e3f9d" />
 
-   
 2. Ejecutar el comando "mvn clean install" para compilar esta parte y debe arrojar un resultado como se muestra a continuación:
    <img width="1413" height="800" alt="image" src="https://github.com/user-attachments/assets/f99f2187-09d4-4606-95ee-338703c1d36d" />
 3. Para levantar el servicio, se ejecuta el comando "mvn spring-boot:run"; se tiene que ver como se aprecia a continuación:
