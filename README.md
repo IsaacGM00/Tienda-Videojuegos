@@ -54,7 +54,7 @@ Para levantar la página web, se hace desde dos perspectivas:
    <img width="1307" height="268" alt="image" src="https://github.com/user-attachments/assets/718c638d-0463-4440-a3f5-9c52ac69145b" />
 8. Para los demás endpoints existentes, se realizan los mismos pasos anteriores, dependiendo si solicita parámetros o no.
 
-<b style="text-align: center;">------ FRONTEND ------ </b>
+<h2 align="center">------ FRONTEND ------</h2>
 1. Posicionarse en la carpeta "frontend" (de preferencia en la terminal cmd, ya que powershell no es compatible)
    <img width="395" height="42" alt="image" src="https://github.com/user-attachments/assets/026499c9-a592-4ad0-bb23-7f94f2ff6046" />
 2. Ejecutar el comando "ng serve" para levantar esta parte y se tiene que ver como a continuación:
