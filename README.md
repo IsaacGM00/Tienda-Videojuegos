@@ -56,7 +56,7 @@ Para levantar la página web, se hace desde dos perspectivas:
 
 <h2 align="center">------ FRONTEND ------</h2>
 
-1. Posicionarse en la carpeta "frontend" (de preferencia en la terminal cmd, ya que powershell no es compatible)
+1. Posicionarse en la carpeta "frontend" (preferiblemente desde la terminal cmd, ya que powershell no es compatible)
    ![image](https://github.com/user-attachments/assets/026499c9-a592-4ad0-bb23-7f94f2ff6046)
 2. Ejecutar el comando "ng serve" para levantar esta parte y se tiene que ver como a continuación:
    ![image](https://github.com/user-attachments/assets/10324e59-52ec-4c5a-a827-eba96326486c)
