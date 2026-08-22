@@ -5,12 +5,13 @@ Para levantar la página web, se hace desde dos perspectivas:
 </ul>
 
 <h2 align="center">------ BACKEND ------</h2>
-1. Posicionarse en la carpeta "backend" (puede ser desde cualquier terminal)  
-   ![image](https://github.com/user-attachments/assets/d27b2a11-1281-4a31-8fa1-2890bc4e3f9d)
-2. Ejecutar el comando `mvn clean install` para compilar esta parte y debe arrojar un resultado como se muestra a continuación:  
-   ![image](https://github.com/user-attachments/assets/f99f2187-09d4-4606-95ee-338703c1d36d)
-3. Para levantar el servicio, se ejecuta el comando `mvn spring-boot:run`; se tiene que ver como se aprecia a continuación:  
-   ![image](https://github.com/user-attachments/assets/4bea1f9b-bb3f-4322-9364-3c0c57a66066)
+
+1. Posicionarse en la carpeta "backend" (puede ser desde cualquier terminal)
+<img width="407" height="32" alt="image" src="https://github.com/user-attachments/assets/d27b2a11-1281-4a31-8fa1-2890bc4e3f9d" />
+2. Ejecutar el comando "mvn clean install" para compilar esta parte y debe arrojar un resultado como se muestra a continuación:
+<img width="1413" height="800" alt="image" src="https://github.com/user-attachments/assets/f99f2187-09d4-4606-95ee-338703c1d36d" />
+3. Para levantar el servicio, se ejecuta el comando "mvn spring-boot:run"; se tiene que ver como se aprecia a continuación:
+<img width="1448" height="897" alt="image" src="https://github.com/user-attachments/assets/4bea1f9b-bb3f-4322-9364-3c0c57a66066" />
 4. Una vez realizado lo anterior, es posible visualizar los endpoints en "Postman" y/o "Swagger".
 
 
