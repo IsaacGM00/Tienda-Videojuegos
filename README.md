@@ -5,6 +5,7 @@ Para levantar la página web, se hace desde dos perspectivas:
 </ul>
 
 <h2 align="center">------ BACKEND ------</h2>
+
 1. Posicionarse en la carpeta "backend" (puede ser desde cualquier terminal)  
    ![image](https://github.com/user-attachments/assets/d27b2a11-1281-4a31-8fa1-2890bc4e3f9d)
 
@@ -15,7 +16,7 @@ Para levantar la página web, se hace desde dos perspectivas:
    ![image](https://github.com/user-attachments/assets/4bea1f9b-bb3f-4322-9364-3c0c57a66066)
 
 4. Una vez realizado lo anterior, es posible visualizar los endpoints en "Postman" y/o "Swagger".
-   
+
 <b>Postman</b>
 1. En la parte superior de la aplicación, se coloca la siguiente url: http://localhost:8080/api/juegos. Del lado izquierdo del link, se puede modificar la acción (POST, DELETE, PUT)
    <img width="1433" height="138" alt="image" src="https://github.com/user-attachments/assets/e2550779-63db-4082-8d36-8b21cdff6d47" />
