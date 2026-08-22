@@ -15,7 +15,6 @@ Para levantar la página web, se hace desde dos perspectivas:
 4. Una vez realizado lo anterior, es posible visualizar los endpoints en "Postman" y/o "Swagger".
 
 <b>Postman</b>
-<b>Postman</b>
 1. En la parte superior de la aplicación, se coloca la siguiente url: http://localhost:8080/api/juegos. Del lado izquierdo del link, se puede modificar la acción (POST, DELETE, PUT)
    ![image](https://github.com/user-attachments/assets/e2550779-63db-4082-8d36-8b21cdff6d47)
 2. En caso de realizar accion POST y PUT, se selecciona la pestaña "Body" y en la esquina derecha, seleccionar "JSON"  
