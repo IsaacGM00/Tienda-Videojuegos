@@ -3,6 +3,7 @@ Para levantar la página web, se hace desde dos perspectivas:
 <li><b>Frontend</b></li>
 
 <h2 align="center">------ BACKEND ------</h2>
+
 1. Posicionarse en la carpeta "backend" (puede ser desde cualquier terminal)
    <img width="407" height="32" alt="image" src="https://github.com/user-attachments/assets/d27b2a11-1281-4a31-8fa1-2890bc4e3f9d" />
 
