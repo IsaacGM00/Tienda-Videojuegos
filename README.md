@@ -55,16 +55,16 @@ Para levantar la página web, se hace desde dos perspectivas:
 8. Para los demás endpoints existentes, se realizan los mismos pasos anteriores, dependiendo si solicita parámetros o no.
 
 <h2 align="center">------ FRONTEND ------</h2>
+
 1. Posicionarse en la carpeta "frontend" (de preferencia en la terminal cmd, ya que powershell no es compatible)
-   <img width="395" height="42" alt="image" src="https://github.com/user-attachments/assets/026499c9-a592-4ad0-bb23-7f94f2ff6046" />
+   ![image](https://github.com/user-attachments/assets/026499c9-a592-4ad0-bb23-7f94f2ff6046)
 2. Ejecutar el comando "ng serve" para levantar esta parte y se tiene que ver como a continuación:
-   <img width="592" height="357" alt="image" src="https://github.com/user-attachments/assets/10324e59-52ec-4c5a-a827-eba96326486c" />
+   ![image](https://github.com/user-attachments/assets/10324e59-52ec-4c5a-a827-eba96326486c)
 3. Una vez realziado los dos pasos anteriores, se ingresa al siguiente link en el navegador: http://localhost:4200/
 4. Se tiene que visualizar como se aprecia en la siguiente imagen:
-   <img width="1917" height="996" alt="image" src="https://github.com/user-attachments/assets/4cd6ee48-7a24-4be6-8854-811a5174d923" />
+   ![image](https://github.com/user-attachments/assets/4cd6ee48-7a24-4be6-8854-811a5174d923)
 5. Finalmente, es posible navegar en las demás pestañas, por ejemplo:
-   <img width="1916" height="995" alt="image" src="https://github.com/user-attachments/assets/bb881aca-65a7-408e-aee0-7d0597b8261a" />
-   <img width="1917" height="982" alt="image" src="https://github.com/user-attachments/assets/3a698ff1-a7c9-484d-860e-4d0ca9f29d8c" />
+   ![image](https://github.com/user-attachments/assets/bb881aca-65a7-408e-aee0-7d0597b8261a)
+   ![image](https://github.com/user-attachments/assets/3a698ff1-a7c9-484d-860e-4d0ca9f29d8c)
 
-<b style="text-align: center;">------ IMPORTANTE ------ </b>
-Primero se levanta la parte de backend y después la de frontend, de lo contario, no se mostrará la información de los productos almacenados en la base de datos (H2) en la página y solo se apreciará el diseño.
+<b>IMPORTANTE: </b> Primero se levanta la parte de backend y después la de frontend, de lo contario, no se mostrará la información de los productos almacenados en la base de datos (H2) en la página y solo se apreciará el diseño.
