@@ -29,7 +29,10 @@ Para levantar la página web, se hace desde dos perspectivas:
 6. Aparte del módulo Juegos, existen otros dos: Mandos y Consolas, para la ejecución de los endpoints se realiza exactamente los mismos pasos, nada más que con las urls http://localhost:8080/api/mandos y http://localhost:8080/api/consolas respectivamente.
 
 <b>NOTA: </b> en este caso, para consultar los registros realizados, se ingresa a H2.
-<li>Se escribe en el navegador el sigiente link: http://localhost:8080/h2-ui y se tiene que ver esta pantalla. Se ajustan los parametros de "JDBC URL", "user" y "password" declarados en el archivo de properties.</li>
+<li>Se escribe en el navegador el siguiente link: 
+    <a href="http://localhost:8080/h2-ui">http://localhost:8080/h2-ui</a> 
+    y se tiene que ver esta pantalla. Se ajustan los parámetros de "JDBC URL", "user" y "password" declarados en el archivo de properties.
+</li>
 <img width="648" height="407" alt="image" src="https://github.com/user-attachments/assets/4b52b001-0d88-47ac-b7e5-8c292b8a7a55" />
 <li>Se da clic en "Test Connection" para corroborar que los parámetros sean correctos y tiene que arrojar un mensaje exitoso.</li>
 <img width="633" height="473" alt="image" src="https://github.com/user-attachments/assets/9553732b-a6cd-438b-b0e0-7b3303162036" />
