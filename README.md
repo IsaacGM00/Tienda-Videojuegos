@@ -16,16 +16,17 @@ Para levantar la página web, se hace desde dos perspectivas:
 
 <b>Postman</b>
 1. En la parte superior de la aplicación, se coloca la siguiente url: http://localhost:8080/api/juegos. Del lado izquierdo del link, se puede modificar la acción (POST, DELETE, PUT)
+   ![image](https://github.com/user-attachments/assets/e2550779-63db-4082-8d36-8b21cdff6d47)
    <img width="1433" height="138" alt="image" src="https://github.com/user-attachments/assets/e2550779-63db-4082-8d36-8b21cdff6d47" />
 2. En caso de realizar accion POST y PUT, se selecciona la pestaña "Body" y en la esquina derecha, seleccionar "JSON"
-   <img width="740" height="236" alt="image" src="https://github.com/user-attachments/assets/ed92b372-1f73-4c02-af68-57f7f390c6ad" />
+   ![image](https://github.com/user-attachments/assets/ed92b372-1f73-4c02-af68-57f7f390c6ad)
 3. Se coloca el cuerpo de los datos a registrar acorde a las variables existentes en el codigo
-   <img width="615" height="217" alt="image" src="https://github.com/user-attachments/assets/654ec918-5fbc-408a-aa67-ad6e0809bbbe" />
+   ![image](https://github.com/user-attachments/assets/654ec918-5fbc-408a-aa67-ad6e0809bbbe)
 4. Se le da clic en el botón "Send" y deberá aparecer un mensaje 200 de éxito
-   <img width="798" height="18" alt="image" src="https://github.com/user-attachments/assets/a89a92be-f1fa-45d6-88f3-34c0e41820e7" />
+   ![image](https://github.com/user-attachments/assets/a89a92be-f1fa-45d6-88f3-34c0e41820e7)
 5. En el caso de las acciones GET y DELETE, solo se coloca la url (sin escribir el cuerpo JSON)
-   <img width="1426" height="976" alt="image" src="https://github.com/user-attachments/assets/c1e516e9-e6c1-42c8-9db6-e2bed519e429" />
-   <img width="725" height="233" alt="image" src="https://github.com/user-attachments/assets/922d0551-f305-4d32-8e67-edd147df5c65" />
+   ![image](https://github.com/user-attachments/assets/c1e516e9-e6c1-42c8-9db6-e2bed519e429)
+   ![image](https://github.com/user-attachments/assets/922d0551-f305-4d32-8e67-edd147df5c65)
 6. Aparte del módulo Juegos, existen otros dos: Mandos y Consolas, para la ejecución de los endpoints se realiza exactamente los mismos pasos, nada más que con las urls http://localhost:8080/api/mandos y http://localhost:8080/api/consolas respectivamente.
 
 <b>NOTA: </b> en este caso, para consultar los registros realizados, se ingresa a H2.
