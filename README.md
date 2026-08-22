@@ -5,6 +5,7 @@ Para levantar la página web, se hace desde dos perspectivas:
 </ul>
 
 <h2 align="center">------ BACKEND ------</h2>
+
 1. Posicionarse en la carpeta "backend" (puede ser desde cualquier terminal)  
    ![image](https://github.com/user-attachments/assets/d27b2a11-1281-4a31-8fa1-2890bc4e3f9d)
 2. Ejecutar el comando `mvn clean install` para compilar esta parte y debe arrojar un resultado como se muestra a continuación:  
