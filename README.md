@@ -1,4 +1,5 @@
 Para levantar la página web, se hace desde dos perspectivas:
+
 <li><b>Backend</b></li>
 <li><b>Frontend</b></li>
 
