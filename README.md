@@ -63,7 +63,7 @@ Para levantar la página web, se hace desde dos perspectivas:
    ![image](https://github.com/user-attachments/assets/026499c9-a592-4ad0-bb23-7f94f2ff6046)
 2. Ejecutar el comando "ng serve" para levantar esta parte y se tiene que ver como a continuación:
    ![image](https://github.com/user-attachments/assets/10324e59-52ec-4c5a-a827-eba96326486c)
-3. Una vez realziado los dos pasos anteriores, se ingresa al siguiente link en el navegador: http://localhost:4200/
+3. Una vez realizados los dos pasos anteriores, se ingresa al siguiente link en el navegador: http://localhost:4200/
 4. Se tiene que visualizar como se aprecia en la siguiente imagen:
    ![image](https://github.com/user-attachments/assets/4cd6ee48-7a24-4be6-8854-811a5174d923)
 5. Finalmente, es posible navegar en las demás pestañas, por ejemplo:
