@@ -1,6 +1,12 @@
 <app-encabezado></app-encabezado>
 <app-barra></app-barra>
 
+<div class="toast-container">
+  @for (toast of toasts; track toast.id) {
+    <div class="toast">{{ toast.mensaje }}</div>
+  }
+</div>
+
 <div class="contenido-mandos">
   <h2 class="titulo-play">Play Station</h2>
 

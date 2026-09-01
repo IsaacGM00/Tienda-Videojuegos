@@ -70,6 +70,9 @@ export class Juegos implements OnInit {
     return 'otros'; // fallback si no coincide
   }
 
+  toasts: { mensaje: string, id: number }[] = [];
+  private toastId = 0;
+
   agregarAlCarrito(juego: any) {
     const marcaFolder = this.getMarcaFolder(juego.consola);
     this.carritoService.addItem({
@@ -80,6 +83,15 @@ export class Juegos implements OnInit {
       cantidad: 1,
       tipo: 'juegos'
     });
+
+    const mensaje = `✅ Se agregó "${juego.nombreJuego}" al carrito`;
+    const id = ++this.toastId;
+    this.toasts.push({ mensaje, id });
+
+    // Eliminar este toast después de 3 segundos
+    setTimeout(() => {
+      this.toasts = this.toasts.filter(t => t.id !== id);
+    }, 3000);
   }
 
 }

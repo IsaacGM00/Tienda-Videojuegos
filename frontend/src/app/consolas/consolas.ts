@@ -57,15 +57,27 @@ export class Consolas implements OnInit{
         return 'otros'; // fallback si no coincide
       }
 
-      agregarAlCarrito(consola: any) {
-        const marcaFolder = this.getMarcaFolder(consola.serieConsola);
-        this.carritoService.addItem({
-          id: consola.id,
-          nombre: consola.nombreConsola,
-          precio: consola.precio,
-          imagen: `assets/images/consolas/${marcaFolder}/${consola.imagen}`,
-          cantidad: 1,
-          tipo: 'consolas'
+      toasts: { mensaje: string, id: number }[] = [];
+      private toastId = 0;
+
+    agregarAlCarrito(consola: any) {
+      const marcaFolder = this.getMarcaFolder(consola.serieConsola);
+      this.carritoService.addItem({
+        id: consola.id,
+        nombre: consola.nombreConsola,
+        precio: consola.precio,
+        imagen: `assets/images/consolas/${marcaFolder}/${consola.imagen}`,
+        cantidad: 1,
+        tipo: 'consolas'
       });
+
+      const mensaje = `✅ Se agregó "${consola.nombreConsola}" al carrito`;
+      const id = ++this.toastId;
+      this.toasts.push({ mensaje, id });
+
+      // Eliminar este toast después de 3 segundos
+      setTimeout(() => {
+        this.toasts = this.toasts.filter(t => t.id !== id);
+      }, 3000);
     }
 }
