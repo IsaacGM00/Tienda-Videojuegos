@@ -7,6 +7,8 @@ import { Consolas } from './consolas/consolas';
 import { Carrito } from './carrito/carrito';
 import { Usuarios } from './usuarios/usuarios';
 import { JuegosDetalle } from './juegos-detalle/juegos-detalle';
+import { MandosDetalle } from './mandos-detalle/mandos-detalle';
+import { ConsolasDetalle } from './consolas-detalle/consolas-detalle';
 
 export const routes: Routes = [
   { path: 'inicio', component: Inicio },
@@ -17,5 +19,7 @@ export const routes: Routes = [
   { path: 'carrito', component: Carrito },
   { path: 'usuarios', component: Usuarios },
   { path: 'juegos/:id', component: JuegosDetalle},
+  { path: 'mandos/:id', component: MandosDetalle},
+  { path: 'consolas/:id', component: ConsolasDetalle},
   { path: '', redirectTo: '/inicio', pathMatch: 'full' }
 ];

@@ -1,0 +1,14 @@
+<app-encabezado></app-encabezado>
+<app-barra></app-barra>
+
+@if (mando) {
+  <div class="detalle-container">
+    <h2>{{ mando?.nombreMando }}</h2>
+    <img [src]="'assets/images/mandos/' + getMarcaFolder(mando?.consola) + '/' + mando?.imagen" alt="{{ mando?.nombreMando }}">
+    <p><strong>Consola:</strong> {{ mando?.consola }}</p>
+    <p><strong>Precio:</strong> ${{ mando?.precio }}</p>
+    <button>Agregar al carrito</button>
+  </div>
+}
+
+<app-pie></app-pie>

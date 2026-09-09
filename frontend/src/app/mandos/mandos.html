@@ -12,14 +12,14 @@
 
   <div class="store">
     @for (mando of mandosPlay; track mando.id) {
-        <div class="card">
+        <a class="card" (click)="verDetalle(mando)">
           <img [src]="'assets/images/mandos/playstation/' + mando.imagen" [alt]="mando.nombreMando" class="product-img">
           <h3>{{ mando.nombreMando }}</h3>
           <p class="console">{{ mando.consola }}</p>
           <p class="price">${{ mando.precio }}</p>
           <span class="warranty">24 MESES DE GARANTÍA</span>
-          <button class="cart" (click)="agregarAlCarrito(mando)">🛒</button>
-        </div>
+          <button class="cart" (click)="agregarAlCarrito(mando); $event.stopPropagation()">🛒</button>
+        </a>
     }
   </div>
 
@@ -27,14 +27,14 @@
 
   <div class="store">
     @for (mando of mandosXbox; track mando.id) {
-      <div class="card">
+      <a class="card" (click)="verDetalle(mando)">
         <img [src]="'assets/images/mandos/xbox/' + mando.imagen" [alt]="mando.nombreMando" class="product-img">
         <h3>{{ mando.nombreMando }}</h3>
         <p class="console">{{ mando.consola }}</p>
         <p class="price">${{ mando.precio }}</p>
         <span class="warranty">24 MESES DE GARANTÍA</span>
-        <button class="cart" (click)="agregarAlCarrito(mando)">🛒</button>
-      </div>
+        <button class="cart" (click)="agregarAlCarrito(mando); $event.stopPropagation()">🛒</button>
+      </a>
     }
   </div>
 
@@ -42,14 +42,14 @@
 
   <div class="store">
     @for (mando of mandosNintendo; track mando.id) {
-      <div class="card">
+       <a class="card" (click)="verDetalle(mando)">
         <img [src]="'assets/images/mandos/nintendo/' + mando.imagen" [alt]="mando.nombreMando" class="product-img">
         <h3>{{ mando.nombreMando }}</h3>
         <p class="console">{{ mando.consola }}</p>
         <p class="price">${{ mando.precio }}</p>
         <span class="warranty">24 MESES DE GARANTÍA</span>
-        <button class="cart" (click)="agregarAlCarrito(mando)">🛒</button>
-      </div>
+        <button class="cart" (click)="agregarAlCarrito(mando); $event.stopPropagation()">🛒</button>
+       </a>
     }
   </div>
 </div>

@@ -4,6 +4,7 @@ import { Encabezado } from '../encabezado/encabezado';
 import { Barra } from '../barra/barra';
 import { Pie } from '../pie/pie';
 import { CarritoService } from '../carrito/carrito.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mandos',
@@ -20,8 +21,13 @@ export class Mandos implements OnInit{
 
     constructor(
       private readonly mandoService: MandosService,
-      private readonly carritoService: CarritoService
+      private readonly carritoService: CarritoService,
+      private readonly router: Router
     ) {}
+
+    verDetalle(mando: Mando) {
+        this.router.navigate(['/mandos', mando.id]);
+    }
 
     ngOnInit(): void {
       this.mandoService.getAll().subscribe(data => {

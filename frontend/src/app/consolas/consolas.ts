@@ -4,6 +4,7 @@ import { Encabezado } from '../encabezado/encabezado';
 import { Barra } from '../barra/barra';
 import { Pie } from '../pie/pie';
 import { CarritoService } from '../carrito/carrito.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-consolas',
@@ -19,8 +20,13 @@ export class Consolas implements OnInit{
 
       constructor(
         private readonly consolaService: ConsolasService,
-        private readonly carritoService: CarritoService
+        private readonly carritoService: CarritoService,
+        private readonly router: Router
       ) {}
+
+      verDetalle(consola: Consola) {
+        this.router.navigate(['/consolas', consola.id]);
+      }
 
       ngOnInit(): void {
         this.consolaService.getAll().subscribe(data => {

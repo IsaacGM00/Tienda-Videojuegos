@@ -12,14 +12,14 @@
 
   <div class="store">
     @for (consola of consolasPlay; track consola.id) {
-        <div class="card">
+        <a class="card" (click)="verDetalle(consola)">
           <img [src]="'assets/images/consolas/playstation/' + consola.imagen" [alt]="consola.nombreConsola" class="product-img">
           <h3>{{ consola.nombreConsola }}</h3>
           <p class="console">{{ consola.serieConsola }}</p>
           <p class="price">${{ consola.precio }}</p>
           <span class="warranty">24 MESES DE GARANTÍA</span>
           <button class="cart" (click)="agregarAlCarrito(consola)">🛒</button>
-        </div>
+        </a>
     }
   </div>
 
@@ -27,14 +27,14 @@
 
   <div class="store">
     @for (consola of consolasXbox; track consola.id) {
-      <div class="card">
+      <a class="card" (click)="verDetalle(consola)">
         <img [src]="'assets/images/consolas/xbox/' + consola.imagen" [alt]="consola.nombreConsola" class="product-img">
         <h3>{{ consola.nombreConsola }}</h3>
         <p class="console">{{ consola.serieConsola }}</p>
         <p class="price">${{ consola.precio }}</p>
         <span class="warranty">24 MESES DE GARANTÍA</span>
         <button class="cart" (click)="agregarAlCarrito(consola)">🛒</button>
-      </div>
+      </a>
     }
   </div>
 
@@ -42,14 +42,14 @@
 
   <div class="store">
     @for (consola of consolasNintendo; track consola.id) {
-      <div class="card">
+      <a class="card" (click)="verDetalle(consola)">
         <img [src]="'assets/images/consolas/nintendo/' + consola.imagen" [alt]="consola.nombreConsola" class="product-img">
         <h3>{{ consola.nombreConsola }}</h3>
         <p class="console">{{ consola.serieConsola }}</p>
         <p class="price">${{ consola.precio }}</p>
         <span class="warranty">24 MESES DE GARANTÍA</span>
         <button class="cart" (click)="agregarAlCarrito(consola)">🛒</button>
-      </div>
+      </a>
     }
   </div>
 </div>
