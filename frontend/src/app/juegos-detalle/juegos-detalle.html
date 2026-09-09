@@ -1,0 +1,14 @@
+<app-encabezado></app-encabezado>
+<app-barra></app-barra>
+
+@if (juego) {
+  <div class="detalle-container">
+    <h2>{{ juego?.nombreJuego }}</h2>
+    <img [src]="'assets/images/juegos/' + getMarcaFolder(juego?.consola) + '/' + juego?.imagen" alt="{{ juego?.nombreJuego }}">
+    <p><strong>Consola:</strong> {{ juego?.consola }}</p>
+    <p><strong>Precio:</strong> ${{ juego?.precio }}</p>
+    <button>Agregar al carrito</button>
+  </div>
+}
+
+<app-pie></app-pie>

@@ -12,14 +12,14 @@
 
   <div class="store">
     @for (juego of juegosPlay; track juego.id) {
-        <div class="card">
-          <img [src]="'assets/images/juegos/playstation/' + juego.imagen" [alt]="juego.nombreJuego" class="product-img">
-          <h3>{{ juego.nombreJuego }}</h3>
-          <p class="console">{{ juego.consola }}</p>
-          <p class="price">${{ juego.precio }}</p>
-          <span class="warranty">24 MESES DE GARANTÍA</span>
-          <button class="cart" (click)="agregarAlCarrito(juego)">🛒</button>
-        </div>
+      <a class="card" (click)="verDetalle(juego)">
+        <img [src]="'assets/images/juegos/playstation/' + juego.imagen" [alt]="juego.nombreJuego" class="product-img">
+        <h3>{{ juego.nombreJuego }}</h3>
+        <p class="console">{{ juego.consola }}</p>
+        <p class="price">${{ juego.precio }}</p>
+        <span class="warranty">24 MESES DE GARANTÍA</span>
+        <button class="cart" (click)="agregarAlCarrito(juego); $event.stopPropagation()">🛒</button>
+      </a>
     }
   </div>
 
@@ -27,14 +27,14 @@
 
   <div class="store">
     @for (juego of juegosXbox; track juego.id) {
-      <div class="card">
+      <a class="card" (click)="verDetalle(juego)">
         <img [src]="'assets/images/juegos/xbox/' + juego.imagen" [alt]="juego.nombreJuego" class="product-img">
         <h3>{{ juego.nombreJuego }}</h3>
         <p class="console">{{ juego.consola }}</p>
         <p class="price">${{ juego.precio }}</p>
         <span class="warranty">24 MESES DE GARANTÍA</span>
-        <button class="cart" (click)="agregarAlCarrito(juego)">🛒</button>
-      </div>
+        <button class="cart" (click)="agregarAlCarrito(juego); $event.stopPropagation()">🛒</button>
+      </a>
     }
   </div>
 
@@ -42,14 +42,14 @@
 
   <div class="store">
     @for (juego of juegosNintendo; track juego.id) {
-      <div class="card">
+      <a class="card" (click)="verDetalle(juego)">
         <img [src]="'assets/images/juegos/nintendo/' + juego.imagen" [alt]="juego.nombreJuego" class="product-img">
         <h3>{{ juego.nombreJuego }}</h3>
         <p class="console">{{ juego.consola }}</p>
         <p class="price">${{ juego.precio }}</p>
         <span class="warranty">24 MESES DE GARANTÍA</span>
-        <button class="cart" (click)="agregarAlCarrito(juego)">🛒</button>
-      </div>
+        <button class="cart" (click)="agregarAlCarrito(juego); $event.stopPropagation()">🛒</button>
+      </a>
     }
   </div>
 </div>

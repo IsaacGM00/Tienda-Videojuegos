@@ -4,6 +4,7 @@ import { Encabezado } from '../encabezado/encabezado';
 import { Barra } from '../barra/barra';
 import { Pie } from '../pie/pie';
 import { CarritoService } from '../carrito/carrito.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-juegos',
@@ -20,8 +21,13 @@ export class Juegos implements OnInit {
 
   constructor(
     private readonly juegoService: JuegosService,
-    private readonly carritoService: CarritoService
+    private readonly carritoService: CarritoService,
+    private readonly router: Router
   ) {}
+
+  verDetalle(juego: Juego) {
+    this.router.navigate(['/juegos', juego.id]);
+  }
 
   ngOnInit(): void {
     this.juegoService.getAll().subscribe(data => {
