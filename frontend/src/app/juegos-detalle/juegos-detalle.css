@@ -1,13 +1,13 @@
 .detalle-container {
   display: flex;
   flex-direction: column;
-  align-items: center;   /* centra horizontal */
+  align-items: center; /* centra horizontal */
   justify-content: center; /* centra vertical si usas min-height */
-  min-height: 80vh;      /* ocupa casi toda la pantalla */
+  min-height: 80vh; /* ocupa casi toda la pantalla */
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 .detalle-container h2 {
@@ -20,7 +20,7 @@
   width: 250px;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
 }
 
@@ -31,7 +31,7 @@
 
 .detalle-container button {
   margin-top: 20px;
-  background: #CC370E;
+  background: #cc370e;
   color: #fff;
   border: none;
   padding: 12px 20px;
