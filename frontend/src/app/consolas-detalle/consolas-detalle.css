@@ -3,11 +3,10 @@
   flex-direction: column;
   align-items: center; /* centra horizontal */
   justify-content: center; /* centra vertical si usas min-height */
-  min-height: 80vh; /* ocupa casi toda la pantalla */
+  min-height: 100vh; /* ocupa casi toda la pantalla */
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
-  margin-top: 200px;
 }
 
 .detalle-container h2 {
@@ -17,8 +16,9 @@
 }
 
 .detalle-container img {
-  width: 250px;
-  height: auto;
+  width: 270px;
+  height: 270px;
+  object-fit: cover; /* recorta y ajusta la imagen */
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
