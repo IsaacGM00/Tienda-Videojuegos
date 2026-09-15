@@ -1,13 +1,24 @@
 <app-encabezado></app-encabezado>
 <app-barra></app-barra>
 
+<div class="toast-container">
+  @for (toast of toasts; track toast.id) {
+    <div class="toast">{{ toast.mensaje }}</div>
+  }
+</div>
+
 @if (mando) {
   <div class="detalle-container">
     <h2>{{ mando?.nombreMando }}</h2>
-    <img [src]="'assets/images/mandos/' + getMarcaFolder(mando?.consola) + '/' + mando?.imagen" alt="{{ mando?.nombreMando }}">
+    <img
+      [src]="'assets/images/mandos/' + getMarcaFolder(mando?.consola) + '/' + mando?.imagen"
+      alt="{{ mando?.nombreMando }}"
+    />
     <p><strong>Consola:</strong> {{ mando?.consola }}</p>
     <p><strong>Precio:</strong> ${{ mando?.precio }}</p>
-    <button>Agregar al carrito</button>
+    <button class="cart" (click)="agregarAlCarrito(mando); $event.stopPropagation()">
+      Agregar al carrito
+    </button>
   </div>
 }
 
