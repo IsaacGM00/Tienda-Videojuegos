@@ -1,9 +1,10 @@
 .detalle-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* centra horizontal */
-  justify-content: center; /* centra vertical si usas min-height */
-  min-height: 100vh; /* ocupa toda la pantalla */
+  align-items: center;
+  justify-content: flex-start; /* ya no lo centramos vertical */
+  min-height: 100vh;
+  padding-top: 270px; /* baja todo el bloque */
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
