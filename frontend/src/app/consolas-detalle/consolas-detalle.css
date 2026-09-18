@@ -17,9 +17,8 @@
 }
 
 .detalle-container img {
-  width: 270px;
-  height: 270px;
-  object-fit: cover; /* recorta y ajusta la imagen */
+  width: 250px;
+  height: 250px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
